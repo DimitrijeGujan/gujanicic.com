@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F5F5EF;
+    color: #1F2839;
+    overflow-x: hidden;
+}
+
+.centered-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh; /* Ensure full height */
+    background-color: #B69D74;
+}
+
+.title-box {
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 4em; /* Twice the normal size */
+}
+
+h1 span {
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+h1 span:hover {
+    transform: scale(1.5);
+}
+
+.arrow {
+    font-size: 8em;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: transform 0.3s; /* Add transition for smooth scaling */
+}
+
+.arrow:hover {
+    transform: scale(1.5); /* Enlarge the arrow on hover */
+}
+
+
+.content {
+    height: 100vh;
+    padding: 50px;
+    background-color: #F5F5EF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; /* Change to row for side-by-side layout */
+    gap: 20px; /* Add some space between boxes */
+}
+
+.box {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #1F2839;
+    background-color: #B69D74;
+    color: #1F2839;
+    width: 300px;
+    text-align: center;
+}
+
+.box.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.box-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
