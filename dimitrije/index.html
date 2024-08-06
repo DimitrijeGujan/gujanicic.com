@@ -38,8 +38,8 @@
     </style>
 </head>
 <body>
-    <div class="header">Dimitrije's Bedroom</div>
-    <div class="ascii-art">
+    <div id="header" class="header" style="visibility: hidden;">Dimitrije's Bedroom</div>
+    <div id="ascii-art" class="ascii-art" style="visibility: hidden;">
         +-------------Door----+-------------------------------------------------------------------------------------------------------------------------------+<br>
         |                                                                                                                                                     |<br>
         |                                                                                                      _____________________                          |<br>
@@ -67,5 +67,41 @@
         |                                                                                                                                                     |<br>
         +-------------------------------------------------+------------------------------------------------------------+--------------------------------------+<br>
     </div>
+    <script>
+        const headerElement = document.getElementById('header');
+        const asciiElement = document.getElementById('ascii-art');
+        const headerContent = headerElement.innerHTML;
+        const asciiContent = asciiElement.innerHTML.split('<br>');
+        headerElement.innerHTML = '';
+        asciiElement.innerHTML = '';
+        headerElement.style.visibility = 'visible';
+        asciiElement.style.visibility = 'visible';
+
+        let headerIndex = 0;
+        let asciiIndex = 0;
+        const speed = 100; // typing speed in milliseconds
+
+        function typeHeader() {
+            if (headerIndex < headerContent.length) {
+                headerElement.innerHTML += headerContent.charAt(headerIndex);
+                headerIndex++;
+                setTimeout(typeHeader, speed);
+            } else {
+                typeAscii();
+            }
+        }
+
+        function typeAscii() {
+            if (asciiIndex < asciiContent.length) {
+                asciiElement.innerHTML += asciiContent[asciiIndex] + '<br>';
+                asciiIndex++;
+                setTimeout(typeAscii, speed);
+            }
+        }
+
+        window.onload = typeHeader;
+    </script>
 </body>
 </html>
+
+
