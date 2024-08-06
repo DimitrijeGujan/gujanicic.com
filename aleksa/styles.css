@@ -44,7 +44,6 @@ h1 span:hover {
     transform: scale(1.5); /* Enlarge the arrow on hover */
 }
 
-
 .content {
     height: 100vh;
     padding: 50px;
@@ -57,6 +56,9 @@ h1 span:hover {
 }
 
 .box {
+    display: block;
+    text-decoration: none;
+    color: inherit;
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 1s ease, transform 1s ease;
@@ -64,9 +66,10 @@ h1 span:hover {
     padding: 20px;
     border: 1px solid #1F2839;
     background-color: #B69D74;
-    color: #1F2839;
     width: 300px;
     text-align: center;
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
 }
 
 .box.visible {
@@ -78,4 +81,25 @@ h1 span:hover {
     width: 100%;
     height: auto;
     margin-bottom: 20px;
+}
+
+.box h2,
+.box p {
+    pointer-events: none; /* Ensure text doesn't interfere with the click */
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.box:hover {
+    animation: pulsate 0.5s ease-in-out infinite;
 }
