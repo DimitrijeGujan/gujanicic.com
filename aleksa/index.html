@@ -12,8 +12,9 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #1abc9c, #3498db);
-      color: #fff;
+      /* Refined dark grey to brown gradient background */
+      background: linear-gradient(135deg, #2e2e2e, #5d4037);
+      color: #f0f0f0;
       line-height: 1.6;
     }
     a {
@@ -35,38 +36,45 @@
     header h1 {
       font-size: 3rem;
       margin: 20px 0 10px;
+      color: #f0f0f0;
     }
     header p.tagline {
       font-size: 1.25rem;
       margin: 10px 0 20px;
+      color: #ddd;
     }
     .profile-img {
       width: 150px;
       height: 150px;
       border-radius: 50%;
-      border: 5px solid #fff;
+      border: 5px solid #f0f0f0;
       object-fit: cover;
       display: block;
       margin: 0 auto;
     }
-    .linkedin-btn {
-      background-color: #0077b5;
-      color: #fff;
+    /* Buttons style */
+    .button-container {
+      margin-top: 20px;
+    }
+    .btn {
+      background: transparent;
+      color: #f0f0f0;
       padding: 10px 20px;
-      border: none;
+      border: 2px solid #f0f0f0;
       border-radius: 30px;
       font-size: 1rem;
       cursor: pointer;
       display: inline-block;
-      margin-top: 20px;
-      transition: background-color 0.3s ease;
+      margin: 10px 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
-    .linkedin-btn:hover {
-      background-color: #005582;
+    .btn:hover {
+      background-color: #f0f0f0;
+      color: #2e2e2e;
     }
     /* Bio Section */
     .bio {
-      background-color: rgba(0, 0, 0, 0.2);
+      background-color: rgba(0, 0, 0, 0.3);
       padding: 30px;
       border-radius: 10px;
       margin: 40px 0;
@@ -82,17 +90,19 @@
       text-align: center;
       font-size: 2rem;
       margin-bottom: 20px;
+      color: #f0f0f0;
     }
     .bio p {
       font-size: 1.1rem;
       margin-bottom: 15px;
+      color: #ddd;
     }
     /* Footer */
     footer {
       text-align: center;
       padding: 20px 0;
       font-size: 0.9rem;
-      background-color: rgba(0, 0, 0, 0.1);
+      background-color: rgba(0, 0, 0, 0.2);
     }
   </style>
 </head>
@@ -104,7 +114,10 @@
     <p class="tagline">
       First-generation Political Science Graduate &nbsp;|&nbsp; JD Candidate at Loyola University Chicago School of Law
     </p>
-    <a href="https://www.linkedin.com/in/aleksa-gujanicic-694529170/" target="_blank" class="linkedin-btn">LinkedIn</a>
+    <div class="button-container">
+      <a href="https://www.linkedin.com/in/aleksa-gujanicic-694529170/" target="_blank" class="btn">LinkedIn</a>
+      <a href="https://gujanicic.com/aleksa/resume.pdf" download class="btn">Download Resume</a>
+    </div>
   </header>
 
   <!-- Bio Section -->
@@ -115,7 +128,7 @@
         I graduated from the University of Illinois Urbana-Champaign in May 2022 as a first-generation Political Science student. During my time at UIUC, I immersed myself in research and campus initiatives that deepened my understanding of law, governance, and public policy.
       </p>
       <p>
-        Post-graduation, I have built valuable experience in legal analysis and operations—experiences that have enriched my perspective and prepared me for the rigorous challenges of the legal field. Now, as a JD candidate at Loyola University Chicago School of Law, I am dedicated to advancing my legal expertise.
+        Post-graduation, I built valuable experience in legal analysis and operations that enriched my perspective and prepared me for the rigorous challenges of the legal field. Now, as a JD candidate at Loyola University Chicago School of Law, I am dedicated to advancing my legal expertise.
       </p>
     </section>
   </div>
